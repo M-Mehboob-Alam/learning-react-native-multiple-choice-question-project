@@ -1,20 +1,44 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
+import styles from './App.styles';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.root}>
+      <Text style={styles.question}>Which one is a cup of tea?</Text>    
+      <View style={styles.optionsContainer}>
+        <View style={styles.optionContainer}>
+        <Image source={{uri: 'https://e7.pngegg.com/pngimages/406/1017/png-clipart-classical-chinese-tea-cup-chinese-style-tea-cup-thumbnail.png'}}
+          style={styles.image} 
+          resizeMode='contain'
+          />
+          <Text style={styles.optionText}>Cup of tea</Text>
+        </View>  
+        <View style={styles.optionContainer}>
+        <Image source={{uri: 'https://e7.pngegg.com/pngimages/406/1017/png-clipart-classical-chinese-tea-cup-chinese-style-tea-cup-thumbnail.png'}}
+          style={styles.image} 
+          resizeMode='contain'
+          />
+          <Text style={styles.optionText}>Cup of tea</Text>
+        </View>  
+        <View style={styles.optionContainer}>
+        <Image source={{uri: 'https://e7.pngegg.com/pngimages/406/1017/png-clipart-classical-chinese-tea-cup-chinese-style-tea-cup-thumbnail.png'}}
+          style={styles.image} 
+          resizeMode='contain'
+          />
+          <Text style={styles.optionText}>Cup of tea</Text>
+        </View>  
+        <View style={styles.optionContainer}>
+        <Image source={{uri: 'https://e7.pngegg.com/pngimages/406/1017/png-clipart-classical-chinese-tea-cup-chinese-style-tea-cup-thumbnail.png'}}
+          style={styles.image} 
+          resizeMode='contain'
+          />
+          <Text style={styles.optionText}>Cup of tea</Text>
+        </View>  
+      </View>  
+     
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
