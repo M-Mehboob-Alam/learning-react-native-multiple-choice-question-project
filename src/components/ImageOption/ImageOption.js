@@ -1,16 +1,27 @@
-import { View, Text, Image } from'react-native';
+import { View, Text, Image, Pressable } from'react-native';
 import styles from './ImageOption.styles';
-const ImageOption = () => {
+import PropTypes from 'prop-types'; // ES6
+const ImageOption = ({image, text, isSelected, selectedOption, id, setSelectedOption}) => {
     return (
-      <View style={styles.optionContainer}>
-      <Image source={{uri: 'https://e7.pngegg.com/pngimages/406/1017/png-clipart-classical-chinese-tea-cup-chinese-style-tea-cup-thumbnail.png'}}
+      <Pressable onPress={()=> setSelectedOption(id)} style={[styles.optionContainer ,isSelected && styles.isSelected]}>
+      <Image source={{uri: image}}
         style={styles.image} 
         resizeMode='contain'
         />
-        <Text style={styles.optionText}>Cup of tea</Text>
-      </View> 
+        <Text style={styles.optionText}>{text}</Text>
+
+      </Pressable> 
     )
   }
 
-
+ImageOption.propTypes ={
+  image: PropTypes.string,
+  text: PropTypes.string,
+  isSelected: PropTypes.bool
+};
+ImageOption.defaultProps = {
+  image: 'https://images.unsplash.com/photo-1517329782449-810562a4ec2f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW1hZ2V8ZW58MHx8MHx8fDA%3D',
+  text:'Default  no text found',
+  isSelected: false
+}
   export default ImageOption;

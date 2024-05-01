@@ -30,6 +30,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
     },
+    isSelected:{
+        borderColor: 'green',
+        borderWidth: 2,
+    }
 });
 
 export default styles;

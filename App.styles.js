@@ -8,8 +8,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: '100%',
         paddingTop: 20,
+        flexWrap: 'wrap',
     },
  
+    
+    questionContainer:{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        height: '100%',
+        paddingTop: 20,
+        flexWrap: 'wrap',
+
+    },
     optionsContainer:{
        
         width: '100%',
